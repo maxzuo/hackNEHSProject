@@ -12,7 +12,6 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     
     var schools: Array<String>!
     let handler = DataHandler()
-    var selectedSchool: String = "No School Selected"
 
     @IBOutlet weak var schoolLabel: UILabel!
     
@@ -35,13 +34,6 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
             destination.delegate = self
         }
     }
-    
-    func setSchool() {
-        
-        print(selectedSchool)
-        self.schoolLabel.text = selectedSchool
-    }
-
 
 }
 

@@ -9,7 +9,6 @@
 import UIKit
 
 protocol PickSchoolViewControllerDelegate {
-    func setSchool()
 }
 
 class PickSchoolViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -94,11 +93,6 @@ class PickSchoolViewController: UIViewController, UITableViewDelegate, UITableVi
             self.dismiss(animated: true, completion: nil)
 //            performSegue(withIdentifier: "SelectSchool", sender: nil)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        delegate!.selectedSchool = selectedSchool!
-        delegate!.schoolLabel.text = selectedSchool!
     }
 
 }
