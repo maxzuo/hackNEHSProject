@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					81C51D641DA94206000DF8AD = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = G9Z457RH7X;
 						ProvisioningStyle = Automatic;
 					};
 					81C51D781DA94207000DF8AD = {
@@ -412,7 +413,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G9Z457RH7X;
 				INFOPLIST_FILE = "WaitUp!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liZUOrd.WaitUp-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +427,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G9Z457RH7X;
 				INFOPLIST_FILE = "WaitUp!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liZUOrd.WaitUp-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
