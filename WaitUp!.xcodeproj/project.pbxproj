@@ -11,7 +11,6 @@
 		6367071B1DA96FC700DC4B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6367071A1DA96FC700DC4B38 /* GoogleService-Info.plist */; };
 		6367071C1DA96FC700DC4B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6367071A1DA96FC700DC4B38 /* GoogleService-Info.plist */; };
 		6367071D1DA96FC700DC4B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6367071A1DA96FC700DC4B38 /* GoogleService-Info.plist */; };
-		6E283CD578A918997044DC93 /* Pods_WaitUp_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5145173EC617446B412EA2B /* Pods_WaitUp_.framework */; };
 		81C51D691DA94206000DF8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D681DA94206000DF8AD /* AppDelegate.swift */; };
 		81C51D6B1DA94206000DF8AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D6A1DA94206000DF8AD /* LoginViewController.swift */; };
 		81C51D6E1DA94207000DF8AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C51D6C1DA94207000DF8AD /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		81C51D9B1DA949DE000DF8AD /* PickBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */; };
 		81C51D9D1DA95A03000DF8AD /* PickSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */; };
 		B0226D85AD4F3BEB8F981631 /* Pods_WaitUp_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07C3E2DA009D1A79C6D1FDF /* Pods_WaitUp_UITests.framework */; };
+		F62611395144079241193E20 /* Pods_WaitUp_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5145173EC617446B412EA2B /* Pods_WaitUp_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E283CD578A918997044DC93 /* Pods_WaitUp_.framework in Frameworks */,
+				F62611395144079241193E20 /* Pods_WaitUp_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
