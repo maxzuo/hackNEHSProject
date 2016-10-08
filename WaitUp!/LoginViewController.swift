@@ -13,6 +13,7 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     var schools: Array<String>!
     let handler = DataHandler()
 
+    @IBOutlet weak var studentDriver: UISegmentedControl!
     @IBOutlet weak var schoolLabel: UILabel!
     
     override func viewDidLoad() {
@@ -32,6 +33,19 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PickSchoolViewController {
             destination.delegate = self
+        }
+        else {
+            let defaults = UserDefaults.standard
+            
+            defaults.set(schoolLabel.text!, forKey: "School")
+            
+            if studentDriver.selectedSegmentIndex == 0 {
+                defaults.set("student", forKey: "User")
+            }
+            else {
+                defaults.set("driver", forKey: "User")
+            }
+            
         }
     }
 

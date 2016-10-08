@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -35,11 +35,30 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fgb-AE-6ai">
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Driver"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrD-Dn-1yI">
+                                <frame key="frameInset" minX="164" minY="578" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next &gt;"/>
+                                <connections>
+                                    <segue destination="5f4-os-iiZ" kind="show" id="LWE-OE-olV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fgb-AE-6ai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vo-tM-FX7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fgb-AE-6ai" secondAttribute="bottom" constant="206" id="mQn-Qc-OzU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="schoolLabel" destination="HgE-7i-wWi" id="xM4-SD-a2A"/>
+                        <outlet property="studentDriver" destination="fgb-AE-6ai" id="Zml-dR-fWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,6 +101,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRg-Xl-rkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824.79999999999995" y="138.98050974512745"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="etk-g6-T0Y">
+            <objects>
+                <viewController id="5f4-os-iiZ" customClass="MapViewController" customModule="WaitUp_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RpH-GS-0Gf"/>
+                        <viewControllerLayoutGuide type="bottom" id="c0h-n7-uLG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ueo-Km-rTf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Rz-5Rv"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c0h-n7-uLG" firstAttribute="top" secondItem="lhK-Rz-5Rv" secondAttribute="bottom" id="76c-kt-Nq1"/>
+                            <constraint firstItem="lhK-Rz-5Rv" firstAttribute="leading" secondItem="ueo-Km-rTf" secondAttribute="leading" id="Dep-UQ-D5o"/>
+                            <constraint firstAttribute="trailing" secondItem="lhK-Rz-5Rv" secondAttribute="trailing" id="mju-M7-e9Q"/>
+                            <constraint firstItem="lhK-Rz-5Rv" firstAttribute="top" secondItem="ueo-Km-rTf" secondAttribute="top" id="p92-Et-lqX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="lhK-Rz-5Rv" id="zLr-pD-QpQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-ir-SBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5999999999999" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
