@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>667942237750-7276fmuq4ogkkef0bqq185bj35atjdah.apps.googleusercontent.com</string>
+	<string>1021481949325-soaj733ajsdq36lhhbh7f4ugq4jst21i.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.667942237750-7276fmuq4ogkkef0bqq185bj35atjdah</string>
+	<string>com.googleusercontent.apps.1021481949325-soaj733ajsdq36lhhbh7f4ugq4jst21i</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCEwpa9NBS6Dv3KBQL1nN22wZUvRnJIbwE</string>
+	<string>AIzaSyCLqdoZP-rq7BU4kFTsxBTTxW9qyBmHLH8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>667942237750</string>
+	<string>1021481949325</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.liZUOrd.WaitUp-</string>
 	<key>PROJECT_ID</key>
-	<string>hacknehsmaxdavid</string>
+	<string>waitup-e5e82</string>
 	<key>STORAGE_BUCKET</key>
-	<string>hacknehsmaxdavid.appspot.com</string>
+	<string>waitup-e5e82.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:667942237750:ios:6a433e9f26a9b5bf</string>
+	<string>1:1021481949325:ios:6a433e9f26a9b5bf</string>
 	<key>DATABASE_URL</key>
-	<string>https://hacknehsmaxdavid.firebaseio.com</string>
+	<string>https://waitup-e5e82.firebaseio.com</string>
 </dict>
 </plist>
