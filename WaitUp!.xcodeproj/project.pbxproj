@@ -17,6 +17,7 @@
 		81C51D971DA947F6000DF8AD /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D961DA947F6000DF8AD /* DataHandler.swift */; };
 		81C51D991DA949C2000DF8AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D981DA949C2000DF8AD /* MapViewController.swift */; };
 		81C51D9B1DA949DE000DF8AD /* PickBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */; };
+		81C51D9D1DA95A03000DF8AD /* PickSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		81C51D961DA947F6000DF8AD /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		81C51D981DA949C2000DF8AD /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickBusViewController.swift; sourceTree = "<group>"; };
+		81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickSchoolViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				81C51D6A1DA94206000DF8AD /* LoginViewController.swift */,
 				81C51D981DA949C2000DF8AD /* MapViewController.swift */,
 				81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */,
+				81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */,
 				81C51D6C1DA94207000DF8AD /* Main.storyboard */,
 				81C51D961DA947F6000DF8AD /* DataHandler.swift */,
 				81C51D6F1DA94207000DF8AD /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				81C51D971DA947F6000DF8AD /* DataHandler.swift in Sources */,
 				81C51D691DA94206000DF8AD /* AppDelegate.swift in Sources */,
 				81C51D991DA949C2000DF8AD /* MapViewController.swift in Sources */,
+				81C51D9D1DA95A03000DF8AD /* PickSchoolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

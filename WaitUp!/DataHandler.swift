@@ -14,8 +14,7 @@ class DataHandler {
         
     }
     
-    class func retrieveSchoolNames() -> Array<String>? { // Remove optional once actually receiving data
-        
+    func retrieveSchoolNames() -> Array<String>? { // Remove optional once actually receiving data
         return nil
     }
     
