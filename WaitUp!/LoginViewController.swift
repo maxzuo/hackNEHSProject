@@ -21,6 +21,8 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
         schools = DataHandler.retrieveSchoolNames()
         schools = ["LS", "AB", "CD", "AC"]
         
+        DataHandler.updateBusPosition()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
