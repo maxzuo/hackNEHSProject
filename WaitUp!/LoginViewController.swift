@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     
     var schools: Array<String>!
-    let handler = DataHandler()
 
     @IBOutlet weak var studentDriver: UISegmentedControl!
     @IBOutlet weak var schoolLabel: UILabel!
@@ -19,7 +18,7 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        schools = handler.retrieveSchoolNames()
+        schools = DataHandler.retrieveSchoolNames()
         schools = ["LS", "AB", "CD", "AC"]
         
         // Do any additional setup after loading the view, typically from a nib.

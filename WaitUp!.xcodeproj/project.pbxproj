@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63F9A1751DA99925001DE908 /* DataHandler_RetrieveInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F9A1741DA99925001DE908 /* DataHandler_RetrieveInformation.swift */; };
 		8111F2211DA9869E00F42274 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8111F2201DA9869E00F42274 /* GoogleService-Info.plist */; };
 		81C51D691DA94206000DF8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D681DA94206000DF8AD /* AppDelegate.swift */; };
 		81C51D6B1DA94206000DF8AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D6A1DA94206000DF8AD /* LoginViewController.swift */; };
@@ -15,7 +16,7 @@
 		81C51D731DA94207000DF8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C51D711DA94207000DF8AD /* LaunchScreen.storyboard */; };
 		81C51D7E1DA94207000DF8AD /* WaitUp_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D7D1DA94207000DF8AD /* WaitUp_Tests.swift */; };
 		81C51D891DA94207000DF8AD /* WaitUp_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D881DA94207000DF8AD /* WaitUp_UITests.swift */; };
-		81C51D971DA947F6000DF8AD /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D961DA947F6000DF8AD /* DataHandler.swift */; };
+		81C51D971DA947F6000DF8AD /* DataHandler_Upload Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D961DA947F6000DF8AD /* DataHandler_Upload Information.swift */; };
 		81C51D991DA949C2000DF8AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D981DA949C2000DF8AD /* MapViewController.swift */; };
 		81C51D9B1DA949DE000DF8AD /* PickBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */; };
 		81C51D9D1DA95A03000DF8AD /* PickSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		488533EE060F19B9530FCDFF /* libPods-WaitUp!.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaitUp!.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4898676A049F440E4EA930CA /* Pods_WaitUp_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaitUp_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F9A1741DA99925001DE908 /* DataHandler_RetrieveInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler_RetrieveInformation.swift; sourceTree = "<group>"; };
 		8111F2201DA9869E00F42274 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81C51D651DA94206000DF8AD /* WaitUp!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WaitUp!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C51D681DA94206000DF8AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		81C51D841DA94207000DF8AD /* WaitUp!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WaitUp!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C51D881DA94207000DF8AD /* WaitUp_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitUp_UITests.swift; sourceTree = "<group>"; };
 		81C51D8A1DA94207000DF8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81C51D961DA947F6000DF8AD /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		81C51D961DA947F6000DF8AD /* DataHandler_Upload Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataHandler_Upload Information.swift"; sourceTree = "<group>"; };
 		81C51D981DA949C2000DF8AD /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickBusViewController.swift; sourceTree = "<group>"; };
 		81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickSchoolViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +144,8 @@
 				81C51D9A1DA949DE000DF8AD /* PickBusViewController.swift */,
 				81C51D9C1DA95A03000DF8AD /* PickSchoolViewController.swift */,
 				81C51D6C1DA94207000DF8AD /* Main.storyboard */,
-				81C51D961DA947F6000DF8AD /* DataHandler.swift */,
+				81C51D961DA947F6000DF8AD /* DataHandler_Upload Information.swift */,
+				63F9A1741DA99925001DE908 /* DataHandler_RetrieveInformation.swift */,
 				81C51D6F1DA94207000DF8AD /* Assets.xcassets */,
 				81C51D711DA94207000DF8AD /* LaunchScreen.storyboard */,
 				81C51D741DA94207000DF8AD /* Info.plist */,
@@ -357,9 +360,10 @@
 			files = (
 				81C51D9B1DA949DE000DF8AD /* PickBusViewController.swift in Sources */,
 				81C51D6B1DA94206000DF8AD /* LoginViewController.swift in Sources */,
-				81C51D971DA947F6000DF8AD /* DataHandler.swift in Sources */,
+				81C51D971DA947F6000DF8AD /* DataHandler_Upload Information.swift in Sources */,
 				81C51D691DA94206000DF8AD /* AppDelegate.swift in Sources */,
 				81C51D991DA949C2000DF8AD /* MapViewController.swift in Sources */,
+				63F9A1751DA99925001DE908 /* DataHandler_RetrieveInformation.swift in Sources */,
 				81C51D9D1DA95A03000DF8AD /* PickSchoolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
