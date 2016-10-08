@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Firebase
+import FirebaseDatabase
 class DataHandler {
     
     private func retrieveBusinfo() {
