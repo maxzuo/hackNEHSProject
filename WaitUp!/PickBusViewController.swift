@@ -16,7 +16,7 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let schoolInfo = DataHandler.retrieveSchoolInfo()
+        /*let schoolInfo = DataHandler.retrieveSchoolInfo()
         
         let lines = schoolInfo?.components(separatedBy: "\n")
         
@@ -25,7 +25,7 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
             if name.count >= 1 {
                 buses.append(name[0])
             }
-        }
+        }*/
 
         busTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         

@@ -22,7 +22,7 @@ class DataHandler {
         databaseRef.child("Concord Carlisle").child("1").setValue("")
         databaseRef.child("Acton Boxborough").child("1").setValue("")
         
-    }*/
+    }
     
     class func updateBusPosition() {
         let bus = UserDefaults.standard.value(forKey: "Bus") as? NSString as! String
@@ -48,6 +48,6 @@ class DataHandler {
         
         databaseRef.child(school).child("1").setValue(newInfo)
         
-    }
+    }*/
     
 }

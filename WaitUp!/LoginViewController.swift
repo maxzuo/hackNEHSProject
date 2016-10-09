@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     
@@ -18,10 +20,19 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        schools = DataHandler.retrieveSchoolNames()
-        schools = ["LS", "AB", "CD", "AC"]
+        let defaults = UserDefaults.standard
         
-        DataHandler.updateBusPosition()
+        if let school = defaults.value(forKey: "School") as? NSString {
+            schoolLabel.text = school as String
+        }
+        
+        let database = FIRDatabase.database().reference()
+        database.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
+            
+            print("Retrieving school names")
+            self.schools = ((snap.value! as! NSArray)[1] as! String).components(separatedBy: "\t")
+            
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -32,6 +43,7 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("This is schools: \(schools)")
         if let destination = segue.destination as? PickSchoolViewController {
             destination.delegate = self
         }

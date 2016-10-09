@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 extension DataHandler {
     
-    class func retrieveBusinfo() -> [Float]? {
+    /*class func retrieveBusinfo() -> [Float]? {
         
         let defaults = UserDefaults.standard
         let bus = defaults.value(forKey: "Bus") as? NSString as! String
@@ -27,24 +27,27 @@ extension DataHandler {
         }
         
         return nil
-    }
+    }*/
     
-    class func retrieveSchoolNames() -> Array<String> { // Remove optional once actually receiving data
+    /*class func retrieveSchoolNames() -> Array<String> { // Remove optional once actually receiving data
 
         var schoolNames: Array<String> = []
         let database = FIRDatabase.database().reference()
         
-        database.child("School_Names").queryOrderedByKey().observe(.childChanged, with: {
-            snapshot in
-            schoolNames = (snapshot.value! as! String).components(separatedBy: "\t")
+        database.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
             
-        })
-        
+            print("Retrieving school names")
+            schoolNames = ((snap.value! as! NSArray)[1] as! String).components(separatedBy: "\t")
+            return schoolNames
+            
+        }
+        print(schoolNames)
+
         return schoolNames
         
-    }
+    }*/
     
-    class func retrieveSchoolInfo() -> String? {
+/*    class func retrieveSchoolInfo() -> String? {
         
         var schoolInfo: String = ""
         
@@ -64,6 +67,6 @@ extension DataHandler {
             
         }
         return nil
-    }
+    }*/
     
 }
