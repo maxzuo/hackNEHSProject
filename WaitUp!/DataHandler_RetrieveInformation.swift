@@ -43,9 +43,10 @@ extension DataHandler {
         return schoolNames
         
     }
+    
     class func retrieveSchoolInfo() -> String? {
         
-        var schoolName: String = ""
+        var schoolInfo: String = ""
         
         let defaults = UserDefaults.standard
         
@@ -55,11 +56,11 @@ extension DataHandler {
             let database = FIRDatabase.database().reference()
             database.child(selectedSchool as! String).queryOrderedByKey().observe(.childChanged, with: {
                 snapshot in
-                schoolName = snapshot.value! as! String
+                schoolInfo = snapshot.value! as! String
                 
             })
             
-            return schoolName
+            return schoolInfo
             
         }
         return nil

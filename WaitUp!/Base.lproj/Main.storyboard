@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -45,9 +45,6 @@
                                 <frame key="frameInset" minX="164" minY="578" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next &gt;"/>
-                                <connections>
-                                    <segue destination="5f4-os-iiZ" kind="show" id="LWE-OE-olV"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,6 +61,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="90" y="139"/>
+        </scene>
+        <!--Pick Bus View Controller-->
+        <scene sceneID="BFK-SS-OGq">
+            <objects>
+                <viewController id="g8N-Cb-t3g" customClass="PickBusViewController" customModule="WaitUp_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cf-SL-oi4"/>
+                        <viewControllerLayoutGuide type="bottom" id="gwe-ye-gOf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q9n-rN-rD9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UmO-87-P9o">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="g8N-Cb-t3g" id="2uo-qp-gPl"/>
+                                    <outlet property="delegate" destination="g8N-Cb-t3g" id="YgG-WX-WWK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gwe-ye-gOf" firstAttribute="top" secondItem="UmO-87-P9o" secondAttribute="bottom" id="CB7-GY-4ZK"/>
+                            <constraint firstItem="UmO-87-P9o" firstAttribute="leading" secondItem="Q9n-rN-rD9" secondAttribute="leading" id="Du0-mJ-TEY"/>
+                            <constraint firstAttribute="trailing" secondItem="UmO-87-P9o" secondAttribute="trailing" id="rAr-I2-Ryk"/>
+                            <constraint firstItem="UmO-87-P9o" firstAttribute="top" secondItem="Q9n-rN-rD9" secondAttribute="top" id="y1g-Be-pBS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="busTableView" destination="UmO-87-P9o" id="596-fJ-nvk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOY-hE-hdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="798.35082458770626"/>
         </scene>
         <!--Pick School View Controller-->
         <scene sceneID="ibU-kg-oz4">
@@ -114,7 +147,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Rz-5Rv"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Rz-5Rv">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
