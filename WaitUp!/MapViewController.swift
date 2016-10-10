@@ -9,10 +9,12 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var map: MKMapView!
     let locationManager = CLLocationManager()
+    
+    var setUpLocation = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +37,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
         
-        self.map.setRegion(region, animated: true)
+        if setUpLocation {
+            self.map.setRegion(region, animated: true)
+            setUpLocation = false
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

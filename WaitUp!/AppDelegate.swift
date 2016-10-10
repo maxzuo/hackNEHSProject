@@ -25,7 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController")
+            var initialViewController: UIViewController
+                
+            if UserDefaults.standard.value(forKey: "User") as? NSString == "student" {
+                initialViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController")
+            } else {
+                initialViewController = storyboard.instantiateViewController(withIdentifier: "DriverViewController")
+            }
             
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()

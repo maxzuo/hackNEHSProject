@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next &gt;"/>
                                 <connections>
-                                    <segue destination="g8N-Cb-t3g" kind="show" id="FGh-f8-fIx"/>
+                                    <segue destination="g8N-Cb-t3g" kind="show" identifier="SelectBus" id="FGh-f8-fIx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzo-pJ-IUc">
@@ -84,23 +84,70 @@
                                     <outlet property="delegate" destination="g8N-Cb-t3g" id="YgG-WX-WWK"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saM-HH-3tJ">
+                                <items>
+                                    <navigationItem title="Select Your Bus" id="yNT-zk-miN">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Gjn-fa-rGR">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nnt-yf-xIn">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelSelectBus" destination="g8N-Cb-t3g" eventType="touchUpInside" id="vwV-Iw-Ipf"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gwe-ye-gOf" firstAttribute="top" secondItem="UmO-87-P9o" secondAttribute="bottom" id="CB7-GY-4ZK"/>
                             <constraint firstItem="UmO-87-P9o" firstAttribute="leading" secondItem="Q9n-rN-rD9" secondAttribute="leading" id="Du0-mJ-TEY"/>
+                            <constraint firstItem="UmO-87-P9o" firstAttribute="top" secondItem="saM-HH-3tJ" secondAttribute="bottom" id="DuV-Qy-Wov"/>
+                            <constraint firstAttribute="trailing" secondItem="saM-HH-3tJ" secondAttribute="trailing" id="QCQ-NE-UFc"/>
+                            <constraint firstItem="saM-HH-3tJ" firstAttribute="leading" secondItem="Q9n-rN-rD9" secondAttribute="leading" id="nPn-nG-Jag"/>
                             <constraint firstAttribute="trailing" secondItem="UmO-87-P9o" secondAttribute="trailing" id="rAr-I2-Ryk"/>
-                            <constraint firstItem="UmO-87-P9o" firstAttribute="top" secondItem="Q9n-rN-rD9" secondAttribute="top" id="y1g-Be-pBS"/>
+                            <constraint firstItem="saM-HH-3tJ" firstAttribute="top" secondItem="Q9n-rN-rD9" secondAttribute="top" id="tRY-bZ-G2I"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="busTableView" destination="UmO-87-P9o" id="596-fJ-nvk"/>
-                        <segue destination="5f4-os-iiZ" kind="show" identifier="PickBusToMap" id="IEz-KL-PC7"/>
+                        <segue destination="5f4-os-iiZ" kind="show" identifier="StudentMapSegue" id="IEz-KL-PC7"/>
+                        <segue destination="LuO-Xl-Q8O" kind="show" identifier="DriverMapSegue" id="fUS-pi-dz8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOY-hE-hdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.799999999999997" y="798.35082458770626"/>
+            <point key="canvasLocation" x="1600.8" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ik9-iL-sRQ">
+            <objects>
+                <viewController storyboardIdentifier="DriverViewController" id="LuO-Xl-Q8O" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wWX-WP-jnD"/>
+                        <viewControllerLayoutGuide type="bottom" id="xPh-u9-0vT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ofm-MJ-gjI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-fK-sPw">
+                                <state key="normal" title="Start Bus Ride"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wiP-fK-sPw" firstAttribute="top" secondItem="wWX-WP-jnD" secondAttribute="bottom" constant="226" id="igO-Bz-aN6"/>
+                            <constraint firstItem="wiP-fK-sPw" firstAttribute="centerX" secondItem="ofm-MJ-gjI" secondAttribute="centerX" id="oH1-dV-UHf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERE-zK-McM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="297"/>
         </scene>
         <!--Pick School View Controller-->
         <scene sceneID="ibU-kg-oz4">
@@ -121,12 +168,31 @@
                                     <outlet property="delegate" destination="fGB-WU-Tng" id="w8j-Oi-TI5"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xt5-V9-kbG">
+                                <items>
+                                    <navigationItem title="Select Your School" id="aW7-Fo-b8d">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="SKa-wj-vE7">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v3t-e9-JKi">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelSelectSchool" destination="fGB-WU-Tng" eventType="touchUpInside" id="xbw-ZB-gIo"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="96b-Er-Lkh" firstAttribute="leading" secondItem="RLt-ZQ-ZAk" secondAttribute="leading" id="DD2-ru-AhN"/>
+                            <constraint firstItem="Xt5-V9-kbG" firstAttribute="leading" secondItem="RLt-ZQ-ZAk" secondAttribute="leading" id="FDf-2A-eaj"/>
                             <constraint firstItem="7G8-yc-Fus" firstAttribute="top" secondItem="96b-Er-Lkh" secondAttribute="bottom" id="TYg-5S-vfJ"/>
-                            <constraint firstItem="96b-Er-Lkh" firstAttribute="top" secondItem="RLt-ZQ-ZAk" secondAttribute="top" id="Wnp-4M-Jed"/>
+                            <constraint firstAttribute="trailing" secondItem="Xt5-V9-kbG" secondAttribute="trailing" id="Uac-EE-5sT"/>
+                            <constraint firstItem="96b-Er-Lkh" firstAttribute="top" secondItem="Xt5-V9-kbG" secondAttribute="bottom" id="b0o-z8-zVC"/>
+                            <constraint firstItem="Xt5-V9-kbG" firstAttribute="top" secondItem="RLt-ZQ-ZAk" secondAttribute="top" id="fbc-Ha-uUC"/>
                             <constraint firstAttribute="trailing" secondItem="96b-Er-Lkh" secondAttribute="trailing" id="lWQ-T4-VCC"/>
                         </constraints>
                     </view>
@@ -139,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="824.79999999999995" y="138.98050974512745"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Student Map View Controller-->
         <scene sceneID="etk-g6-T0Y">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5f4-os-iiZ" customClass="MapViewController" customModule="WaitUp_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5f4-os-iiZ" customClass="StudentMapViewController" customModule="WaitUp_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RpH-GS-0Gf"/>
                         <viewControllerLayoutGuide type="bottom" id="c0h-n7-uLG"/>
@@ -169,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-ir-SBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2430" y="-397"/>
         </scene>
     </scenes>
 </document>

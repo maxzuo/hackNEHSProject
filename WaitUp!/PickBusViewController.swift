@@ -40,16 +40,6 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.busTableView.reloadData()
             
         }
-        
-        /*
-        let lines = schoolInfo?.components(separatedBy: "\n")
-        
-        for line in lines! {
-            let name = line.components(separatedBy: "\t")
-            if name.count >= 1 {
-                buses.append(name[0])
-            }
-        }*/
 
         busTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         // Do any additional setup after loading the view.
@@ -82,8 +72,16 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         let defaults = UserDefaults.standard
         defaults.set(buses[indexPath.row], forKey: "Bus")
         
-        performSegue(withIdentifier: "PickBusToMap", sender: nil)
+        if UserDefaults.standard.value(forKey: "User") as? NSString == "student" {
+            performSegue(withIdentifier: "StudentMapSegue", sender: nil)
+        }
+        else {
+            performSegue(withIdentifier: "DriverMapSegue", sender: nil)
+        }
         
     }
 
+    @IBAction func cancelSelectBus() {
+        performSegue(withIdentifier: "SelectBus", sender: nil)
+    }
 }

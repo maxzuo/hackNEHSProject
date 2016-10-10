@@ -77,6 +77,9 @@ class PickSchoolViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
+    @IBAction func cancelSelectSchool() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var name = ""
@@ -91,7 +94,6 @@ class PickSchoolViewController: UIViewController, UITableViewDelegate, UITableVi
             selectedSchool = name
             delegate!.schoolLabel.text = selectedSchool!
             self.dismiss(animated: true, completion: nil)
-//            performSegue(withIdentifier: "SelectSchool", sender: nil)
         }
     }
 
