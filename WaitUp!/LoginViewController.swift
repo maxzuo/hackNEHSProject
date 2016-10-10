@@ -26,8 +26,8 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
             schoolLabel.text = school as String
         }
         
-        let database = FIRDatabase.database().reference()
-        database.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
+        let databaseRef = FIRDatabase.database().reference()
+        databaseRef.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
             
             print("Retrieving school names")
             self.schools = ((snap.value! as! NSArray)[1] as! String).components(separatedBy: "\t")

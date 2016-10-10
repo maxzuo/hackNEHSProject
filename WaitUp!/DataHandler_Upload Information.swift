@@ -12,6 +12,8 @@ import FirebaseDatabase
 
 class DataHandler {
     
+    
+    // ONLY USE BELOW FUNCTION AS TEST. NO LONGER A NECESSARY THING TO USE.
     /*class func updateSchoolStrings() {
         
         let databaseRef = FIRDatabase.database().reference()

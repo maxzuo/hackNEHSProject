@@ -19,22 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgE-7i-wWi">
-                                <frame key="frameInset" minX="54" minY="185" width="102" height="21"/>
+                                <frame key="frameInset" minX="16" minY="186" width="231" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzo-pJ-IUc">
-                                <frame key="frameInset" minX="236" minY="181" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose School"/>
-                                <connections>
-                                    <segue destination="fGB-WU-Tng" kind="popoverPresentation" identifier="" popoverAnchorView="vzo-pJ-IUc" id="Gwe-8e-KMW">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fgb-AE-6ai">
                                 <segments>
                                     <segment title="Student"/>
@@ -47,6 +37,16 @@
                                 <state key="normal" title="Next &gt;"/>
                                 <connections>
                                     <segue destination="g8N-Cb-t3g" kind="show" id="FGh-f8-fIx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzo-pJ-IUc">
+                                <frame key="frameInset" minX="255" minY="181" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose School"/>
+                                <connections>
+                                    <segue destination="fGB-WU-Tng" kind="popoverPresentation" identifier="" popoverAnchorView="vzo-pJ-IUc" id="Gwe-8e-KMW">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="139"/>
+            <point key="canvasLocation" x="88.799999999999997" y="138.98050974512745"/>
         </scene>
         <!--Pick Bus View Controller-->
         <scene sceneID="BFK-SS-OGq">
@@ -95,6 +95,7 @@
                     </view>
                     <connections>
                         <outlet property="busTableView" destination="UmO-87-P9o" id="596-fJ-nvk"/>
+                        <segue destination="5f4-os-iiZ" kind="show" identifier="PickBusToMap" id="IEz-KL-PC7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOY-hE-hdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,7 +142,7 @@
         <!--Map View Controller-->
         <scene sceneID="etk-g6-T0Y">
             <objects>
-                <viewController id="5f4-os-iiZ" customClass="MapViewController" customModule="WaitUp_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5f4-os-iiZ" customClass="MapViewController" customModule="WaitUp_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RpH-GS-0Gf"/>
                         <viewControllerLayoutGuide type="bottom" id="c0h-n7-uLG"/>
@@ -150,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Rz-5Rv">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Rz-5Rv">
                                 <frame key="frameInset" width="1000" height="1000"/>
                             </mapView>
                         </subviews>

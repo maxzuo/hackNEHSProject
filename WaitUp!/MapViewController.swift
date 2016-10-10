@@ -41,7 +41,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("ERROR: " + error.localizedDescription)
+        print("Location ERROR: " + error.localizedDescription)
     }
 
 }

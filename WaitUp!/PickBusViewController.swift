@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,8 +18,30 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let schoolInfo = DataHandler.retrieveSchoolInfo()
+        // Retrieve selected school name.
         
+        let defaults = UserDefaults.standard
+        let schoolName = defaults.value(forKey: "School") as? NSString as! String
+        
+        let database = FIRDatabase.database().reference()
+        //var schoolInfo: String?
+        
+        database.child(schoolName).observe(.value) { (snap: FIRDataSnapshot) in
+            
+            var busesData = (snap.value! as! NSArray) as Array
+            busesData.removeFirst()
+            
+            for busData in busesData {
+                if busData as! String != "" {
+                    self.buses.append(busData.components(separatedBy: "\t")[0])
+                }
+            }
+            
+            self.busTableView.reloadData()
+            
+        }
+        
+        /*
         let lines = schoolInfo?.components(separatedBy: "\n")
         
         for line in lines! {
@@ -28,7 +52,6 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         }*/
 
         busTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
         // Do any additional setup after loading the view.
     }
 
@@ -58,6 +81,8 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let defaults = UserDefaults.standard
         defaults.set(buses[indexPath.row], forKey: "Bus")
+        
+        performSegue(withIdentifier: "PickBusToMap", sender: nil)
         
     }
 
