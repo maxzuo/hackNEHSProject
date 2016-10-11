@@ -8,6 +8,9 @@
 
 import UIKit
 import MapKit
+import Firebase
+import FirebaseDatabase
+import CoreLocation
 
 class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -15,6 +18,10 @@ class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKM
     let locationManager = CLLocationManager()
     
     var setUpLocation = true
+    let databaseRef = FIRDatabase.database().reference()
+    let defaults = UserDefaults.standard
+    
+    //var annotation: MKAnnotation
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +29,42 @@ class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKM
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.startUpdatingLocation()
-        self.map.showsUserLocation = true
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 42, longitude: -71)
+        annotation.title = "Test"
+        annotation.subtitle = "Testing Test"
+        
+        self.map.addAnnotation(annotation)
+        
+        //self.locationManager.startUpdatingLocation()
+        //self.map.showsUserLocation = true
+        /*
+        databaseRef.child(defaults.value(forKey: "School") as? NSString as! String).child(defaults.value(forKey: "Bus") as? NSString as! String).observe(.value) { (snap: FIRDataSnapshot) in
+            print(self.map.annotations)
+            
+            var busInfo: Array<String>
+            busInfo = ((snap.value! as! NSString) as String).components(separatedBy: "\t")
+            busInfo.removeFirst()
+            print("THIS IS BUSINFO: \(busInfo)")
+            
+            if busInfo[0] == "1" {
+                let x = busInfo[0]
+                let y = busInfo[1]
+                let location = CLLocationCoordinate2D(latitude: (NumberFormatter().number(from: x)?.doubleValue)!, longitude: (NumberFormatter().number(from: y)?.doubleValue)!)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = location
+                annotation.title = "Bus"
+                annotation.subtitle = "Bus"
+                
+                self.map.addAnnotation(annotation)
+                
+            } else {
+                
+            }
+            
+        }*/
 
         // Do any additional setup after loading the view.
     }

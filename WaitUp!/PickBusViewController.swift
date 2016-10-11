@@ -27,15 +27,11 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         //var schoolInfo: String?
         
         database.child(schoolName).observe(.value) { (snap: FIRDataSnapshot) in
+            print(snap.value!)
+            let busesDictionary = (snap.value! as! NSDictionary) as! Dictionary<String, String>
+            self.buses = Array(busesDictionary.keys)
             
-            var busesData = (snap.value! as! NSArray) as Array
-            busesData.removeFirst()
-            
-            for busData in busesData {
-                if busData as! String != "" {
-                    self.buses.append(busData.components(separatedBy: "\t")[0])
-                }
-            }
+            print(self.buses)
             
             self.busTableView.reloadData()
             

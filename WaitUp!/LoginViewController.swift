@@ -29,7 +29,6 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
         let databaseRef = FIRDatabase.database().reference()
         databaseRef.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
             
-            print("Retrieving school names")
             self.schools = ((snap.value! as! NSArray)[1] as! String).components(separatedBy: "\t")
             
         }
@@ -47,7 +46,7 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
         if let destination = segue.destination as? PickSchoolViewController {
             destination.delegate = self
         }
-        else {
+        else if schoolLabel.text! != "School Name" {
             let defaults = UserDefaults.standard
             
             defaults.set(schoolLabel.text!, forKey: "School")
