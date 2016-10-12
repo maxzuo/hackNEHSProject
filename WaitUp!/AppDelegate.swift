@@ -8,16 +8,18 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var databaseRef: FIRDatabaseReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure() //######firebase
+        databaseRef = FIRDatabase.database().reference()
         
         if (UserDefaults.standard.value(forKey: "Bus") as? NSString) != nil {
             

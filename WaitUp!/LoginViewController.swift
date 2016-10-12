@@ -17,6 +17,8 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
     @IBOutlet weak var studentDriver: UISegmentedControl!
     @IBOutlet weak var schoolLabel: UILabel!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +28,7 @@ class ViewController: UIViewController, PickSchoolViewControllerDelegate {
             schoolLabel.text = school as String
         }
         
-        let databaseRef = FIRDatabase.database().reference()
-        databaseRef.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
+        appDelegate.databaseRef.child("School_Names").observe(.value) { (snap: FIRDataSnapshot) in
             
             self.schools = ((snap.value! as! NSArray)[1] as! String).components(separatedBy: "\t")
             

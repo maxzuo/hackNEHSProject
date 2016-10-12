@@ -18,7 +18,7 @@ class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKM
     let locationManager = CLLocationManager()
     
     var setUpLocation = true
-    let databaseRef = FIRDatabase.database().reference()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     
     //var annotation: MKAnnotation
@@ -30,17 +30,10 @@ class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKM
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 42, longitude: -71)
-        annotation.title = "Test"
-        annotation.subtitle = "Testing Test"
+        self.locationManager.startUpdatingLocation()
+        self.map.showsUserLocation = true
         
-        self.map.addAnnotation(annotation)
-        
-        //self.locationManager.startUpdatingLocation()
-        //self.map.showsUserLocation = true
-        /*
-        databaseRef.child(defaults.value(forKey: "School") as? NSString as! String).child(defaults.value(forKey: "Bus") as? NSString as! String).observe(.value) { (snap: FIRDataSnapshot) in
+        appDelegate.databaseRef.child(defaults.value(forKey: "School") as? NSString as! String).child(defaults.value(forKey: "Bus") as? NSString as! String).observe(.value) { (snap: FIRDataSnapshot) in
             print(self.map.annotations)
             
             var busInfo: Array<String>
@@ -49,8 +42,11 @@ class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             print("THIS IS BUSINFO: \(busInfo)")
             
             if busInfo[0] == "1" {
-                let x = busInfo[0]
-                let y = busInfo[1]
+                let x = busInfo[1]
+                let y = busInfo[2]
+                
+                print((NumberFormatter().number(from: x)?.doubleValue)!)
+                
                 let location = CLLocationCoordinate2D(latitude: (NumberFormatter().number(from: x)?.doubleValue)!, longitude: (NumberFormatter().number(from: y)?.doubleValue)!)
                 
                 let annotation = MKPointAnnotation()
@@ -64,7 +60,7 @@ class StudentMapViewController: UIViewController, CLLocationManagerDelegate, MKM
                 
             }
             
-        }*/
+        }
 
         // Do any additional setup after loading the view.
     }

@@ -14,6 +14,8 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var busTableView: UITableView!
     var buses: Array<String>! = []
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +25,9 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         let defaults = UserDefaults.standard
         let schoolName = defaults.value(forKey: "School") as? NSString as! String
         
-        let database = FIRDatabase.database().reference()
         //var schoolInfo: String?
         
-        database.child(schoolName).observe(.value) { (snap: FIRDataSnapshot) in
+        appDelegate.databaseRef.child(schoolName).observe(.value) { (snap: FIRDataSnapshot) in
             print(snap.value!)
             let busesDictionary = (snap.value! as! NSDictionary) as! Dictionary<String, String>
             self.buses = Array(busesDictionary.keys)
