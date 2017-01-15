@@ -10,6 +10,10 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 
+
+protocol NavigationViewControllerDelegate {
+}
+
 class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var busTableView: UITableView!
@@ -24,6 +28,8 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let defaults = UserDefaults.standard
         let schoolName = defaults.value(forKey: "School") as? NSString as! String
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 206, green: 73, blue: 226, alpha: 1.0)
         
         //var schoolInfo: String?
         
@@ -68,7 +74,7 @@ class PickBusViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let defaults = UserDefaults.standard
         defaults.set(buses[indexPath.row], forKey: "Bus")
-        
+
         if UserDefaults.standard.value(forKey: "User") as? NSString == "student" {
             performSegue(withIdentifier: "StudentMapSegue", sender: nil)
         }

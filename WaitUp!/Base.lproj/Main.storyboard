@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,31 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgE-7i-wWi">
-                                <frame key="frameInset" minX="16" minY="186" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgE-7i-wWi">
+                                <rect key="frame" x="16" y="153" width="343" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fgb-AE-6ai">
+                                <rect key="frame" x="125" y="433" width="125" height="29"/>
                                 <segments>
                                     <segment title="Student"/>
                                     <segment title="Driver"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrD-Dn-1yI">
-                                <frame key="frameInset" minX="164" minY="578" width="46" height="30"/>
+                                <rect key="frame" x="164" y="578" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Next &gt;"/>
                                 <connections>
                                     <segue destination="g8N-Cb-t3g" kind="show" identifier="SelectBus" id="FGh-f8-fIx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzo-pJ-IUc">
-                                <frame key="frameInset" minX="16" minY="215" width="104" height="30"/>
+                                <rect key="frame" x="16" y="215" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose School"/>
+                                <state key="normal" title="Choose School">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="fGB-WU-Tng" kind="popoverPresentation" identifier="" popoverAnchorView="vzo-pJ-IUc" id="Gwe-8e-KMW">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -50,7 +58,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.70588235290000001" green="0.078431372550000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fgb-AE-6ai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vo-tM-FX7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fgb-AE-6ai" secondAttribute="bottom" constant="206" id="mQn-Qc-OzU"/>
@@ -78,6 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UmO-87-P9o">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="g8N-Cb-t3g" id="2uo-qp-gPl"/>
@@ -85,13 +94,18 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saM-HH-3tJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.078431372550000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.70588235290000001" green="0.078431372550000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Select Your Bus" id="yNT-zk-miN">
                                         <barButtonItem key="leftBarButtonItem" style="done" id="Gjn-fa-rGR">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nnt-yf-xIn">
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Cancel"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="cancelSelectBus" destination="g8N-Cb-t3g" eventType="touchUpInside" id="vwV-Iw-Ipf"/>
                                                 </connections>
@@ -114,13 +128,47 @@
                     </view>
                     <connections>
                         <outlet property="busTableView" destination="UmO-87-P9o" id="596-fJ-nvk"/>
-                        <segue destination="5f4-os-iiZ" kind="show" identifier="StudentMapSegue" id="IEz-KL-PC7"/>
-                        <segue destination="LuO-Xl-Q8O" kind="show" identifier="DriverMapSegue" id="fUS-pi-dz8"/>
+                        <segue destination="7eE-jk-YGl" kind="show" identifier="StudentMapSegue" id="5or-ld-DzW"/>
+                        <segue destination="ZuP-cM-eGZ" kind="show" identifier="DriverMapSegue" id="lqw-C3-4QD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOY-hE-hdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1600.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AlU-y5-zdP">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationMapViewController" id="7eE-jk-YGl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ml0-MQ-Cvr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.70588235294117641" green="0.078431372549019607" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5f4-os-iiZ" kind="relationship" relationship="rootViewController" id="TD8-8Y-aH6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALV-8s-36z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="-412"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oYH-hy-kew">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationDriverViewController" id="ZuP-cM-eGZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dF1-ew-C53">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.70588235290000001" green="0.078431372550000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LuO-Xl-Q8O" kind="relationship" relationship="rootViewController" id="yfs-9v-7Xz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDF-Of-EoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="296"/>
         </scene>
         <!--Driver View Controller-->
         <scene sceneID="ik9-iL-sRQ">
@@ -135,6 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-fK-sPw">
+                                <rect key="frame" x="138.5" y="290" width="98" height="30"/>
                                 <state key="normal" title="Start Bus Ride"/>
                                 <state key="selected" title="Stop Bus Ride"/>
                                 <connections>
@@ -142,7 +191,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-WZ-Yng">
-                                <frame key="frameInset" minX="67" minY="489" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -152,10 +201,11 @@
                             <constraint firstItem="wiP-fK-sPw" firstAttribute="centerX" secondItem="ofm-MJ-gjI" secondAttribute="centerX" id="oH1-dV-UHf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1H0-UC-23w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERE-zK-McM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430" y="297"/>
+            <point key="canvasLocation" x="3073" y="296"/>
         </scene>
         <!--Pick School View Controller-->
         <scene sceneID="ibU-kg-oz4">
@@ -170,6 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="96b-Er-Lkh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="fGB-WU-Tng" id="8cn-4O-fEs"/>
@@ -177,17 +228,23 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xt5-V9-kbG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.078431372550000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.70588235290000001" green="0.078431372550000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Select Your School" id="aW7-Fo-b8d">
                                         <barButtonItem key="leftBarButtonItem" style="done" id="SKa-wj-vE7">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v3t-e9-JKi">
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Cancel"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="cancelSelectSchool" destination="fGB-WU-Tng" eventType="touchUpInside" id="xbw-ZB-gIo"/>
                                                 </connections>
                                             </button>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -226,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-Rz-5Rv">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,13 +294,14 @@
                             <constraint firstItem="lhK-Rz-5Rv" firstAttribute="top" secondItem="ueo-Km-rTf" secondAttribute="top" id="p92-Et-lqX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pC1-ng-7VF"/>
                     <connections>
                         <outlet property="map" destination="lhK-Rz-5Rv" id="zLr-pD-QpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-ir-SBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430" y="-397"/>
+            <point key="canvasLocation" x="3074" y="-412"/>
         </scene>
     </scenes>
 </document>

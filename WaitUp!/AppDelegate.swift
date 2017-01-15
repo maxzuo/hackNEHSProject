@@ -30,15 +30,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var initialViewController: UIViewController
                 
             if UserDefaults.standard.value(forKey: "User") as? NSString == "student" {
-                initialViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController")
+                initialViewController = storyboard.instantiateViewController(withIdentifier: "NavigationMapViewController")
             } else {
-                initialViewController = storyboard.instantiateViewController(withIdentifier: "DriverViewController")
+                initialViewController = storyboard.instantiateViewController(withIdentifier: "NavigationDriverViewController")
             }
             
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
             
         }
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound], categories: nil))
         
         return true
         

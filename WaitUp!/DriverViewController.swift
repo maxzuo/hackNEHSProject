@@ -24,6 +24,8 @@ class DriverViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 206, green: 73, blue: 226, alpha: 1.0)
 
         // Do any additional setup after loading the view.
     }
